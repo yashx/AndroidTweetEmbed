@@ -1,0 +1,3 @@
+include ':android-tweet-embed'
+include ':app'
+rootProject.name = "Android-Tweet-Embed-Demo"

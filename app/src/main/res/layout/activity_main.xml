@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/tweet_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Tweet URL"
+            app:layout_constraintEnd_toStartOf="@+id/load_url_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/tweet_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Tweet ID"
+            app:layout_constraintEnd_toStartOf="@+id/load_id_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tweet_url" />
+
+        <Button
+            android:id="@+id/load_url_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load Url"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tweet_url"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tweet_url" />
+
+        <Button
+            android:id="@+id/load_id_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load Id"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tweet_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tweet_id" />
+
+        <com.github.yashx.android_tweet_embed.AndroidTweetEmbed
+            android:id="@+id/androidTweetEmbed"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/darkThemeCheckBox" />
+
+        <CheckBox
+            android:id="@+id/hideMediaCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:text="hideMedia"
+            app:layout_constraintEnd_toStartOf="@+id/hideThreadCheckBox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tweet_id" />
+
+        <CheckBox
+            android:id="@+id/doNotTrackCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="doNotTrack"
+            app:layout_constraintBaseline_toBaselineOf="@+id/darkThemeCheckBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/darkThemeCheckBox" />
+
+        <CheckBox
+            android:id="@+id/hideThreadCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hideThread"
+            app:layout_constraintBaseline_toBaselineOf="@+id/hideMediaCheckBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/hideMediaCheckBox" />
+
+        <CheckBox
+            android:id="@+id/darkThemeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="darkTheme"
+            app:layout_constraintEnd_toStartOf="@+id/doNotTrackCheckBox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hideMediaCheckBox" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
